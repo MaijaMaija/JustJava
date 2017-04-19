@@ -29,6 +29,13 @@
             android:paddingLeft="24dp"
             android:text="Whipped cream"
             android:textSize="16dp" />
+        <CheckBox
+            android:id="@+id/chocolateCreamCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="Chocolate cream"
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
