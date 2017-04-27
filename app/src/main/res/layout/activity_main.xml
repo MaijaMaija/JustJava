@@ -15,6 +15,14 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.rihards.justjava.MainActivity">
 
+        <EditText
+            android:id="@+id/insertName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Insert name here"
+            android:maxLines="1"
+            android:inputType="textPersonName" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
