@@ -40,15 +40,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
 
+        EditText insertName = (EditText) findViewById(R.id.insertName);
+
+
         CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.whippedCreamCheckbox);
         boolean hasWhippedCream = whippedCreamCheckbox.isChecked();
         CheckBox chocolateCreamCheckbox = (CheckBox) findViewById(R.id.chocolateCreamCheckbox);
         boolean hasChocolateCream = chocolateCreamCheckbox.isChecked();
 
 
-        EditText insertName = (EditText) findViewById(R.id.insertName);
 
-        int price = calculatePrice();
+        int price = calculatePrice(hasWhippedCream, hasChocolateCream);
         String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolateCream, insertName);
         displayMessage(priceMessage);
 
@@ -59,9 +61,16 @@ public class MainActivity extends AppCompatActivity {
      *
      * @return total price
      */
-    private int calculatePrice() {
-        int price = quantity * 5;
-        return price;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolateCream) {
+        int basePrice = 5;
+        if (addWhippedCream) {
+            basePrice = basePrice + 1;
+        }
+        if (addChocolateCream) {
+            basePrice = basePrice +2;
+        }
+
+        return quantity * basePrice;
     }
 
     /**
