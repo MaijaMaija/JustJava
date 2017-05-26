@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void decrement(View view) {
-        quantity = quantity - 1;
-        if (quantity < 0) {
-            quantity = 0;
+        if (quantity == 0) {
             Toast.makeText(getApplicationContext(), "NOPE",Toast.LENGTH_SHORT).show();
-        } else {
-            displayQuantity(quantity);
+            return;
         }
+
+        quantity = quantity - 1;
+        displayQuantity(quantity);
     }
     /**
      * This method is called when the - button is clicked.
