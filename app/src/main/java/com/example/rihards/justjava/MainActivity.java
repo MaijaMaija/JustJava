@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         quantity = quantity + 1;
         if (quantity > 100) {
             quantity = 100;
-            Toast.makeText(getApplicationContext(), "NOPENOPENOPE", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NOPENOPENOPE", Toast.LENGTH_SHORT).show();
         }
         displayQuantity(quantity);
     }
